@@ -5,6 +5,7 @@ module.exports = {
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
+    publicPath: 'auto',
   },
   devtool: 'inline-source-map',
   devServer: {
@@ -17,8 +18,14 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource',
+        test: /\.(svg|png|jpeg|PNG)$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'public',
+          },
+        },
       },
     ],
   },

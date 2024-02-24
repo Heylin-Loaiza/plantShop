@@ -1,17 +1,17 @@
 // import { extrasImg } from './extras.js';
 import '../styles/style.css';
 
+require.context('../../public/', true, /^\.\/.*\.png|\.\/.*\.PNG/);
+
 function card(plant, container) {
+  const image = `<img src="/public/${plant.pot}-${plant.style}-${plant.color}.png" alt="">`;
+
   let listExtras = '';
   plant.extras.forEach((item) => {
     listExtras += `<p class="card--font value text-uc extras">${item}</p>`;
   });
 
   const materials = ['Name', 'Soil', 'Pot', 'Color', 'Extras'];
-  let materialsName = '';
-  materials.forEach((item) => {
-    materialsName += `<p class="card--font keys">${item}</p>`;
-  });
 
   document.getElementById(container).insertAdjacentHTML(
     'afterbegin',
@@ -21,11 +21,11 @@ function card(plant, container) {
       </p>
       
       <div class="card__img" id="card-img">
-        imgextras
+        ${image}
       </div>
       <div class="card-info">
         <div class="line">
-        ${materialsName}
+        ${materials.map((item) => `<p class="card--font keys">${item}</p>`).join('')}
         </div>
         <div>
           <p class="card--font value text-uc" id="p-name">${plant.name}</p>
