@@ -1,6 +1,7 @@
 /* eslint-disable no-undef */
 import Plant from '../builderPlant';
 import card from '../card';
+import renderBtn from '../renderBtn';
 
 export default function ObjPlant(plantName, soil, style, extras, watering) {
   const plant = new Plant(plantName)
@@ -16,4 +17,5 @@ export default function ObjPlant(plantName, soil, style, extras, watering) {
   }
 
   card(plant, 'card__container');
+  renderBtn();
 }
