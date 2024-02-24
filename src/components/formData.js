@@ -17,7 +17,7 @@ function getName(formData) {
 function formEvent() {
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    document.getElementById('submit-btn').disabled = true;
+    // document.getElementById('submit-btn').disabled = true;
 
     const data = new FormData(e.target);
     const dataExtras = [];
@@ -36,10 +36,10 @@ function formEvent() {
     ObjPlant(plantName, soil, style, extras, watering);
   });
 
-  document.getElementById('reload-btn').addEventListener('click', () => {
-    // eslint-disable-next-line no-restricted-globals
-    location.reload();
-  });
+  // document.getElementById('reload-btn').addEventListener('click', () => {
+  //   // eslint-disable-next-line no-restricted-globals
+  //   location.reload();
+  // });
 }
 
 export default formEvent;
