@@ -1,11 +1,7 @@
-// import { extrasImg } from './extras.js';
+import extrasImg from './plantRender/plantImg';
 import '../styles/style.css';
 
-require.context('../../public/', true, /^\.\/.*\.png|\.\/.*\.PNG/);
-
 function card(plant, container) {
-  const image = `<img src="/public/${plant.pot}-${plant.style}-${plant.color}.png" alt="">`;
-
   let listExtras = '';
   plant.extras.forEach((item) => {
     listExtras += `<p class="card--font value text-uc extras">${item}</p>`;
@@ -19,9 +15,8 @@ function card(plant, container) {
       <p class="card-text">The perfect plant for you is...
       <span class="card__title text-uc" id="card-title">${plant.name}</span>
       </p>
-      
       <div class="card__img" id="card-img">
-        ${image}
+        ${extrasImg(plant)}
       </div>
       <div class="card-info">
         <div class="line">

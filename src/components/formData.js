@@ -1,6 +1,5 @@
 import typeOfPlants from '../utils/config';
-import Plant from './builderPlant';
-import card from './card';
+import ObjPlant from './plantRender/plantRender';
 
 const form = document.getElementById('form');
 
@@ -18,6 +17,8 @@ function getName(formData) {
 function formEvent() {
   form.addEventListener('submit', (e) => {
     e.preventDefault();
+    document.getElementById('submit-btn').disabled = true;
+
     const data = new FormData(e.target);
     const dataExtras = [];
     data.getAll('extras').forEach((value) => {
@@ -28,23 +29,17 @@ function formEvent() {
     formData.extras = dataExtras;
 
     const plantName = getName(formData);
-    const { soil, style, extras } = formData;
+    const {
+      soil, style, extras, watering,
+    } = formData;
 
-    const plant = new Plant(plantName)
-      .setSoil(soil)
-      .setPotDecoration(style)
-      .setPotColor('unpainted')
-      .setExtras(extras);
-    if (formData.watering === 'overwater') {
-      plant.withClayPot();
-      plant.setSoil('drainage');
-    } else {
-      plant.withCeramicPot();
-    }
+    ObjPlant(plantName, soil, style, extras, watering);
+  });
 
-    card(plant, 'card__container');
+  document.getElementById('reload-btn').addEventListener('click', () => {
+    // eslint-disable-next-line no-restricted-globals
+    location.reload();
   });
 }
 
 export default formEvent;
-// LINEA 46 renderBtn(plant);
