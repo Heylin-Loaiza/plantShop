@@ -1,5 +1,3 @@
-const container = document.getElementById('card__container');
-
 function renderBtn() {
   // state.color = plant.color;
   // state.name = plant.name;
@@ -7,22 +5,25 @@ function renderBtn() {
   // state.soil = plant.soil;
   // state.style = plant.style;
   // state.extras = plant.extras;
+  const container = document.getElementById('card__container');
+  const btn = document.createElement('button');
+  btn.textContent = 'Customize!';
+  btn.classList.add('btn', 'btn--bg', 'card-btn');
+  container.appendChild(btn);
 
-  container.insertAdjacentHTML(
-    'beforeend',
-    '<button class="btn btn--bg card-btn" id="customize-btn">Customize!</button>',
-  );
-
-  const btn = document.getElementById('customize-btn');
   btn.addEventListener('click', async (e) => {
     e.preventDefault();
     const title = document.getElementById('title-form');
     const formContainer = document.getElementById('form-container');
-    const response = await fetch('../template/customizeHtml.html');
-    console.log(response);
-    const newForm = await response.text();
 
-    formContainer.innerHTML = newForm;
+    await fetch('../template/customize-form.html')
+      .then((response) => response.text())
+      .then((htmlContent) => {
+        console.log(htmlContent);
+        formContainer.innerHTML = htmlContent;
+      })
+      .catch((error) => console.error('Error al cargar el contenido:', error));
+
     title.innerHTML = 'Customize your plant!';
   });
 }

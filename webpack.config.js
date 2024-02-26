@@ -1,4 +1,6 @@
+/* eslint-disable import/no-extraneous-dependencies */
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -30,4 +32,14 @@ module.exports = {
     ],
   },
   mode: 'development',
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './index.html',
+      filename: 'index.html',
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/template/customize-form.html',
+      filename: 'customize-form.html',
+    }),
+  ],
 };
