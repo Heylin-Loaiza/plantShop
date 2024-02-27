@@ -1,3 +1,5 @@
+import customizeForm from '../template/customize-form.html';
+
 function renderBtn() {
   // state.color = plant.color;
   // state.name = plant.name;
@@ -16,14 +18,7 @@ function renderBtn() {
     const title = document.getElementById('title-form');
     const formContainer = document.getElementById('form-container');
 
-    await fetch('../template/customize-form.html')
-      .then((response) => response.text())
-      .then((htmlContent) => {
-        console.log(htmlContent);
-        formContainer.innerHTML = htmlContent;
-      })
-      .catch((error) => console.error('Error al cargar el contenido:', error));
-
+    formContainer.innerHTML = customizeForm;
     title.innerHTML = 'Customize your plant!';
   });
 }
