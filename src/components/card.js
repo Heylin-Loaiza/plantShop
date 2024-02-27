@@ -1,4 +1,4 @@
-import extrasImg from './plantRender/plantImg';
+import extrasImg from './plantImg';
 import '../styles/style.css';
 
 function card(plant, container) {

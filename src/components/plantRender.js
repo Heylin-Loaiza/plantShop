@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
-import Plant from '../builderPlant';
-import card from '../card';
-import renderBtn from '../renderBtn';
+import Plant from '../utils/builderPlant';
+import card from './card';
+import renderBtn from './customizeBtn';
 
 export default function ObjPlant(plantName, soil, style, extras, watering) {
   const plant = new Plant(plantName)

@@ -5,11 +5,11 @@
   <div class="question">
     <p class="question-text">Pot material</p>
     <div class="answer-group">
-      <input data-id="clay" id="clay" type="radio" name="pot" value="clay" class="inputpot"/>
+      <input data-id="clay" id="clay" type="radio" name="pot" value="clay" class="inputpot" />
       <label for="clay">Clay</label>
     </div>
     <div class="answer-group">
-      <input data-id="ceramic" id="ceramic" type="radio" name="pot" value="ceramic" class="inputpot"/>
+      <input data-id="ceramic" id="ceramic" type="radio" name="pot" value="ceramic" class="inputpot" />
       <label for="ceramic">Ceramic</label>
     </div>
   </div>
@@ -17,21 +17,26 @@
   <div class="question">
     <p class="question-text">Pot decorations</p>
     <div class="answer-group">
-      <label for="decoration" class="switch">
-      <input id="decoration" type="checkbox" name="decoration"/>
-      <span class="slider round"></span>
-      No</label>
+      <input id="decorated" class="inputstyles decorated" type="radio" value="decorated" name="styles" />
+      <label for="decorated" class="switch">Decorated</label>
+    </div>
+    <div class="answer-group">
+      <input id="simple" class="inputstyles simple" type="radio" value="simple" name="styles" />
+      <label for="simple" class="switch">Simple</label>
     </div>
     <div id="container-styles"></div>
   </div>
 
   <div class="question">
     <p class="question-text">Pot color</p>
-    <div class="answer-group">
-      <label for="color" class="switch">
-      <input id="color" type="checkbox" name="color"/>
+    <!-- <div class="answer-group">
+      <input id="color" type="checkbox" name="color" />
       <span class="slider round"></span>
-      No</label>
+      <label for="color" class="switch"></label>No</label>
+    </div> -->
+    <div class="answer-group">
+      <input id="pink" class="inputcolor pink" type="radio" value="pink" name="color" />
+      <label for="pink" class="switch">pink</label>
     </div>
     <div id="container-color"></div>
   </div>
@@ -71,15 +76,15 @@
   <div class="question">
     <p class="question-text">Choose your extras</p>
     <div class="answer-group">
-      <input id="mossPole" type="checkbox" name="extras" value="moss_pole" class="custom-extra"/>
+      <input id="mossPole" type="checkbox" name="extras" value="moss_pole" class="custom-extra" />
       <label for="mossPole">Moss pole</label>
     </div>
     <div class="answer-group">
-      <input id="pebbles" type="checkbox" name="extras" value="pebbles" class="custom-extra"/>
+      <input id="pebbles" type="checkbox" name="extras" value="pebbles" class="custom-extra" />
       <label for="pebbles">Pebbles</label>
     </div>
     <div class="answer-group">
-      <input id="smaller" type="checkbox" name="extras" value="mini_plants" class="custom-extra"/>
+      <input id="smaller" type="checkbox" name="extras" value="mini_plants" class="custom-extra" />
       <label for="smaller">Smaller plants</label>
     </div>
   </div>
