@@ -25,7 +25,7 @@ function card(plant, container) {
         <div>
           <p class="card--font value text-uc" id="p-name">${plant.name}</p>
           <p class="card--font value text-uc" id="p-soil">${plant.soil}</p>
-          <p class="card--font value text-uc" id="p-pot">${plant.pot} with ${plant.style}</p>
+          <p class="card--font value text-uc" id="p-pot">${plant.pot} ${plant.style}</p>
           <p class="card--font value text-uc" id="p-color">${plant.color}</p>
           <div class="extras" id="p-extras">${listExtras}</div>
         </div>
