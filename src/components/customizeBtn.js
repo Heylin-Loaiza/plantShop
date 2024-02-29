@@ -1,12 +1,7 @@
 import customizeForm from '../template/customize-form.html';
+import customResult from './states/customResults';
 
-function renderBtn() {
-  // state.color = plant.color;
-  // state.name = plant.name;
-  // state.pot = plant.pot;
-  // state.soil = plant.soil;
-  // state.style = plant.style;
-  // state.extras = plant.extras;
+function renderBtn(plant) {
   const container = document.getElementById('card__container');
   const btn = document.createElement('button');
   btn.textContent = 'Customize!';
@@ -20,6 +15,8 @@ function renderBtn() {
 
     formContainer.innerHTML = customizeForm;
     title.innerHTML = 'Customize your plant!';
+
+    customResult(plant);
   });
 }
 

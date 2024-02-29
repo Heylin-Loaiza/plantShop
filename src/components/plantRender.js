@@ -17,5 +17,5 @@ export default function ObjPlant(plantName, soil, style, extras, watering) {
   }
 
   card(plant, 'card__container');
-  renderBtn();
+  renderBtn(plant);
 }
