@@ -17,11 +17,11 @@
   <div class="question">
     <p class="question-text">Pot decorations</p>
     <div class="answer-group">
-      <input id="decorated" class="inputstyles decorated" type="radio" value="decorated" name="styles" />
+      <input data-id="decorated" id="decorated" class="inputstyles decorated" type="radio" value="decorated" name="styles" />
       <label for="decorated" class="switch">Decorated</label>
     </div>
     <div class="answer-group">
-      <input id="simple" class="inputstyles simple" type="radio" value="simple" name="styles" />
+      <input data-id="simple" id="simple" class="inputstyles simple" type="radio" value="simple" name="styles" />
       <label for="simple" class="switch">Simple</label>
     </div>
     <div id="container-styles"></div>
@@ -29,14 +29,13 @@
 
   <div class="question">
     <p class="question-text">Pot color</p>
-    <!-- <div class="answer-group">
-      <input id="color" type="checkbox" name="color" />
-      <span class="slider round"></span>
-      <label for="color" class="switch"></label>No</label>
-    </div> -->
     <div class="answer-group">
-      <input id="pink" class="inputcolor pink" type="radio" value="pink" name="color" />
+      <input data-id="pink" id="pink" class="inputcolor pink" type="radio" value="pink" name="color" />
       <label for="pink" class="switch">pink</label>
+    </div>
+    <div class="answer-group">
+      <input data-id="green"  id="green" class="inputcolor green" type="radio" value="green" name="color" />
+      <label for="green" class="switch">green</label>
     </div>
     <div id="container-color"></div>
   </div>
