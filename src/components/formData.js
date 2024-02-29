@@ -1,4 +1,4 @@
-import typeOfPlants from '../utils/config';
+import { typeOfPlants } from '../utils/config';
 import ObjPlant from './plantRender';
 
 const form = document.getElementById('form');

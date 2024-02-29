@@ -29,4 +29,13 @@ const typeOfPlants = {
   },
 };
 
-export default typeOfPlants;
+const state = {
+  name: '',
+  color: '',
+  soil: '',
+  pot: '',
+  style: '',
+  extras: [],
+};
+
+export { typeOfPlants, state };
