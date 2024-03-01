@@ -3,6 +3,7 @@ import { state } from '../../utils/config';
 import initPotVisualizer from './visualizePot';
 import initSoilVisualizer from './visualizeSoil';
 import initPlantVisualizer from './visualizePlant';
+import initExtrasVisualizer from './visualizeExtras';
 
 export default function customResult(plant) {
   state.name = plant.name;
@@ -16,4 +17,5 @@ export default function customResult(plant) {
   initPotVisualizer();
   initSoilVisualizer();
   initPlantVisualizer();
+  initExtrasVisualizer();
 }
