@@ -1,6 +1,6 @@
 require.context('/public/', true, /^\.\/.*\.png|\.\/.*\.PNG/);
 
-export default function extrasImg(plant) {
+export default function images(plant) {
   const {
     name, pot, style, soil, extras, color,
   } = plant;

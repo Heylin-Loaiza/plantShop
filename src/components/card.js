@@ -1,4 +1,4 @@
-import extrasImg from './plantImg';
+import images from './plantImg';
 import '../styles/style.css';
 
 function card(plant, container) {
@@ -16,7 +16,7 @@ function card(plant, container) {
       <span class="card__title text-uc" id="card-title">${plant.name}</span>
       </p>
       <div class="card__img" id="card-img">
-        ${extrasImg(plant)}
+        ${images(plant)}
       </div>
       <div class="card-info">
         <div class="line">
