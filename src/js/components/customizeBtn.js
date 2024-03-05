@@ -6,7 +6,7 @@ const container = document.getElementById('card__container');
 
 function link() {
   const anchor = document.createElement('a');
-  anchor.href = '../pages/purchaseDetails.html';
+  anchor.href = '/purchaseDetails.html';
   anchor.textContent = 'Check store availability';
   anchor.id = 'store-link';
   anchor.classList.add('btn', 'btn-bg', 'anchor');

@@ -1,12 +1,13 @@
 /* eslint-disable import/no-extraneous-dependencies */
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: 'auto',
+    publicPath: '/',
   },
   devtool: 'inline-source-map',
   devServer: {
@@ -16,7 +17,21 @@ module.exports = {
     rules: [
       {
         test: /\.html$/,
-        use: ['html-loader'],
+        use: {
+          loader: 'html-loader',
+          options: {
+            sources: {
+              list: [
+                '...',
+                {
+                  tag: 'a',
+                  attribute: 'href',
+                  type: 'src',
+                },
+              ],
+            },
+          },
+        },
       },
       {
         test: /\.css$/i,
@@ -35,4 +50,18 @@ module.exports = {
     ],
   },
   mode: 'development',
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './index.html',
+      filename: 'index.html',
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/customize-form.html',
+      filename: 'customize-form.html',
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/purchaseDetails.html',
+      filename: 'purchaseDetails.html',
+    }),
+  ],
 };
