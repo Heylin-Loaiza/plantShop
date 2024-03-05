@@ -1,6 +1,6 @@
-import Observer from '../../utils/Observer';
+import Observer from '../../../utils/Observer';
 import eventInput from './inputsEvent';
-import { state } from '../../utils/config';
+import { state } from '../../../utils/config';
 
 const observerSoil = new Observer();
 

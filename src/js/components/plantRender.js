@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-import Plant from '../utils/builderPlant';
+import Plant from '../../utils/builderPlant';
 import card from './card';
 import renderBtn from './customizeBtn';
 

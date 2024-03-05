@@ -1,4 +1,4 @@
-import Observer from '../../utils/Observer';
+import Observer from '../../../utils/Observer';
 import eventInput from './inputsEvent';
 import { toggleSwitch } from './toggleSwitch';
 

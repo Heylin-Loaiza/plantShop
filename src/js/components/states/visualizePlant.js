@@ -1,5 +1,5 @@
-import Observer from '../../utils/Observer';
-import { state } from '../../utils/config';
+import Observer from '../../../utils/Observer';
+import { state } from '../../../utils/config';
 
 const observerName = new Observer();
 

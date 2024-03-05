@@ -1,5 +1,5 @@
-import { colors } from '../../utils/config';
-import Observer from '../../utils/Observer';
+import { colors } from '../../../utils/config';
+import Observer from '../../../utils/Observer';
 import eventInput from './inputsEvent';
 
 const observerColor = new Observer();

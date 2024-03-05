@@ -1,3 +1,3 @@
-import formEvent from './components/formData';
+import formEvent from './js/components/formData';
 
 formEvent();

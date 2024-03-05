@@ -1,5 +1,5 @@
 import images from './plantImg';
-import '../styles/style.css';
+import '../../styles/style.css';
 
 function card(plant, container) {
   let listExtras = '';
