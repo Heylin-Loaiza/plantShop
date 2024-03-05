@@ -1,4 +1,5 @@
-import { observerPot, observerStylePot, observerColor } from './getPotDesing';
+import { observerPot, observerStylePot } from './getPotDesing';
+import { observerColor } from './toggleSwitch';
 import { state } from '../../utils/config';
 
 function handlePotChange(pot) {

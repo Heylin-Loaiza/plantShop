@@ -38,4 +38,6 @@ const state = {
   extras: [],
 };
 
-export { typeOfPlants, state };
+const colors = ['blue', 'pink', 'green', 'purple', 'unpainted'];
+
+export { typeOfPlants, state, colors };

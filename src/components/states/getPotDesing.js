@@ -1,16 +1,16 @@
 import Observer from '../../utils/Observer';
 import eventInput from './inputsEvent';
+import { toggleSwitch } from './toggleSwitch';
 
 const observerPot = new Observer();
 const observerStylePot = new Observer();
-const observerColor = new Observer();
 
 function getPotDesing() {
+  toggleSwitch();
   eventInput(observerPot, 'pot');
   eventInput(observerStylePot, 'styles');
-  eventInput(observerColor, 'color');
 }
 
 export {
-  getPotDesing, observerPot, observerStylePot, observerColor,
+  getPotDesing, observerPot, observerStylePot,
 };
