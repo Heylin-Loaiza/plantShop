@@ -9,7 +9,7 @@ function link() {
   anchor.href = '/purchaseDetails.html';
   anchor.textContent = 'Check store availability';
   anchor.id = 'store-link';
-  anchor.classList.add('btn', 'btn-bg', 'anchor');
+  anchor.classList.add('btn', 'btn--bg', 'anchor');
   container.appendChild(anchor);
   anchor.addEventListener('click', () => {
     sessionStorage.setItem('plantObj', JSON.stringify(state));
