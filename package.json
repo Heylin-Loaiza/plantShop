@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack serve --open --mode development",
-    "prettier": "prettier --write"
+    "prettier": "prettier --write",
+    "eslint": "eslint . --ext .js --fix"
   },
   "keywords": [],
   "author": "",
