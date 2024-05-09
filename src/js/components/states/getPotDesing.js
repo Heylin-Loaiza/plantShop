@@ -1,6 +1,6 @@
-import Observer from '../../../utils/Observer';
-import eventInput from './inputsEvent';
-import { toggleSwitch } from './toggleSwitch';
+import Observer from '../../../utils/Observer.js';
+import eventInput from './inputsEvent.js';
+import { toggleSwitch } from './toggleSwitch.js';
 
 const observerPot = new Observer();
 const observerStylePot = new Observer();

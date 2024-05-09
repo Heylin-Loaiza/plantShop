@@ -1,86 +1,109 @@
-<h1 class="title-form">Customize your plant!</h1>
-<form action="">
-  <p class="question-text">Choose your pot:</p>
+<!DOCTYPE html>
+<html>
 
-  <div class="question">
-    <p class="question-text">Pot material</p>
-    <div class="answer-group">
-      <input data-id="clay" id="clay" type="radio" name="pot" value="clay" class="inputpot" />
-      <label for="clay">Clay</label>
-    </div>
-    <div class="answer-group">
-      <input data-id="ceramic" id="ceramic" type="radio" name="pot" value="ceramic" class="inputpot" />
-      <label for="ceramic">Ceramic</label>
-    </div>
-  </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customize</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet" />
+</head>
 
-  <div class="question">
-    <p class="question-text">Pot decorations</p>
-    <div class="answer-group">
-      <input data-id="decorated" id="decorated" class="inputstyles decorated" type="radio" value="decorated" name="styles" />
-      <label for="decorated" class="switch">Decorated</label>
-    </div>
-    <div class="answer-group">
-      <input data-id="simple" id="simple" class="inputstyles simple" type="radio" value="simple" name="styles" />
-      <label for="simple" class="switch">Simple</label>
-    </div>
-    <div id="container-styles"></div>
-  </div>
+<body>
+  <main>
+    <div>
+      <h1 class="title-form">Customize your plant!</h1>
+      <form action="">
+        <p class="question-text">Choose your pot:</p>
 
-  <div class="question">
-    <p class="question-text">Pot color</p>
-    <label for="color" class="switch" id="switchLabel">
-    <input id="color" type="checkbox" name="color"/>
-    <span class="slider round"></span>
-    No</label>
-    <div id="container-color"></div>
-  </div>
+        <div class="question">
+          <p class="question-text">Pot material</p>
+          <div class="answer-group">
+            <input data-id="clay" id="clay" type="radio" name="pot" value="clay" class="inputpot" />
+            <label for="clay">Clay</label>
+          </div>
+          <div class="answer-group">
+            <input data-id="ceramic" id="ceramic" type="radio" name="pot" value="ceramic" class="inputpot" />
+            <label for="ceramic">Ceramic</label>
+          </div>
+        </div>
 
-  <div class="question">
-    <p class="question-text">Choose your plant</p>
-    <div class="answer-group">
-      <label for="plant"></label>
-      <select id="plant" name="plant" class="dropdownSelect">
-        <option value="aglaonema">Aglaonema Silver Bay</option>
-        <option value="aloe">Aloe Vera</option>
-        <option value="fern">Boston Fern</option>
-        <option value="cactus">Cactus</option>
-        <option value="monstera">Monstera Deliciosa</option>
-        <option value="peaceLily">Peace Lily</option>
-        <option value="sansevieria">Sansevieria</option>
-      </select>
-    </div>
-  </div>
+        <div class="question">
+          <p class="question-text">Pot decorations</p>
+          <div class="answer-group">
+            <input data-id="decorated" id="decorated" class="inputstyles decorated" type="radio" value="decorated"
+              name="styles" />
+            <label for="decorated" class="switch">Decorated</label>
+          </div>
+          <div class="answer-group">
+            <input data-id="simple" id="simple" class="inputstyles simple" type="radio" value="simple" name="styles" />
+            <label for="simple" class="switch">Simple</label>
+          </div>
+          <div id="container-styles"></div>
+        </div>
 
-  <div class="question">
-    <p class="question-text">Choose your soil</p>
-    <div class="answer-group">
-      <input data-id="composted" type="radio" name="soil" id="composted" value="composted" class="inputsoil">
-      <label for="composted">Basic composted soil</label>
-    </div>
-    <div class="answer-group">
-      <input data-id="fertilized" type="radio" name="soil" id="fertilized" value="fertilized" class="inputsoil">
-      <label for="fertilized">Premium fertilized soil</label>
-    </div>
-    <div class="answer-group">
-      <input data-id="drainage" type="radio" name="soil" id="drainage" value="drainage" class="inputsoil">
-      <label for="drainage">Easy drainage soil</label>
-    </div>
-  </div>
+        <div class="question">
+          <p class="question-text">Pot color</p>
+          <label for="color" class="switch" id="switchLabel">
+            <input id="color" type="checkbox" name="color" />
+            <span class="slider round"></span>
+            No</label>
+          <div id="container-color"></div>
+        </div>
 
-  <div class="question">
-    <p class="question-text">Choose your extras</p>
-    <div class="answer-group">
-      <input id="mossPole" type="checkbox" name="extras" value="moss_pole" class="custom-extra" />
-      <label for="mossPole">Moss pole</label>
+        <div class="question">
+          <p class="question-text">Choose your plant</p>
+          <div class="answer-group">
+            <label for="plant"></label>
+            <select id="plant" name="plant" class="dropdownSelect">
+              <option value="aglaonema">Aglaonema Silver Bay</option>
+              <option value="aloe">Aloe Vera</option>
+              <option value="fern">Boston Fern</option>
+              <option value="cactus">Cactus</option>
+              <option value="monstera">Monstera Deliciosa</option>
+              <option value="peaceLily">Peace Lily</option>
+              <option value="sansevieria">Sansevieria</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="question">
+          <p class="question-text">Choose your soil</p>
+          <div class="answer-group">
+            <input data-id="composted" type="radio" name="soil" id="composted" value="composted" class="inputsoil">
+            <label for="composted">Basic composted soil</label>
+          </div>
+          <div class="answer-group">
+            <input data-id="fertilized" type="radio" name="soil" id="fertilized" value="fertilized" class="inputsoil">
+            <label for="fertilized">Premium fertilized soil</label>
+          </div>
+          <div class="answer-group">
+            <input data-id="drainage" type="radio" name="soil" id="drainage" value="drainage" class="inputsoil">
+            <label for="drainage">Easy drainage soil</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p class="question-text">Choose your extras</p>
+          <div class="answer-group">
+            <input id="mossPole" type="checkbox" name="extras" value="moss_pole" class="custom-extra" />
+            <label for="mossPole">Moss pole</label>
+          </div>
+          <div class="answer-group">
+            <input id="pebbles" type="checkbox" name="extras" value="pebbles" class="custom-extra" />
+            <label for="pebbles">Pebbles</label>
+          </div>
+          <div class="answer-group">
+            <input id="smaller" type="checkbox" name="extras" value="mini_plants" class="custom-extra" />
+            <label for="smaller">Smaller plants</label>
+          </div>
+        </div>
+      </form>
     </div>
-    <div class="answer-group">
-      <input id="pebbles" type="checkbox" name="extras" value="pebbles" class="custom-extra" />
-      <label for="pebbles">Pebbles</label>
-    </div>
-    <div class="answer-group">
-      <input id="smaller" type="checkbox" name="extras" value="mini_plants" class="custom-extra" />
-      <label for="smaller">Smaller plants</label>
-    </div>
-  </div>
-</form>
+    <div class="card__container" id="card__container"></div>
+  </main>
+  <script type="module" src="../js/customResults.js"></script>
+</body>
+
+</html>

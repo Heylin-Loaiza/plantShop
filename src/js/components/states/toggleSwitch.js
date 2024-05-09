@@ -1,6 +1,6 @@
-import { colors } from '../../../utils/config';
-import Observer from '../../../utils/Observer';
-import eventInput from './inputsEvent';
+import { colors } from '../../../utils/config.js';
+import Observer from '../../../utils/Observer.js';
+import eventInput from './inputsEvent.js';
 
 const observerColor = new Observer();
 
@@ -18,6 +18,7 @@ function renderColorInput() {
 
 function toggleSwitch() {
   const checkbox = document.getElementById('color');
+  console.log(checkbox);
   const container = document.getElementById('container-color');
   checkbox.addEventListener('click', (e) => {
     const option = e.currentTarget.checked;

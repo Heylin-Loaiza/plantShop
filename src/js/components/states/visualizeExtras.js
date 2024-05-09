@@ -1,6 +1,6 @@
-import Observer from '../../../utils/Observer';
-import { state } from '../../../utils/config';
-import images from '../plantImg';
+import Observer from '../../../utils/Observer.js';
+import { state } from '../../../utils/config.js';
+import images from '../plantImg.js';
 
 const observerExtras = new Observer();
 

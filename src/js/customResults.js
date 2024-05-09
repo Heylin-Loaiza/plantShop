@@ -1,4 +1,4 @@
-import { state } from '../utils/config';
+import { state } from '../utils/config.js';
 
 export default async function customResult(plant) {
   state.name = plant.name;
@@ -8,11 +8,11 @@ export default async function customResult(plant) {
   state.style = plant.style;
   state.extras = plant.extras;
 
-  await import('./components/states/getPotDesing').then(({ getPotDesing }) => getPotDesing());
-  const { default: initPotVisualizer } = await import('./components/states/visualizePot');
-  const { default: initSoilVisualizer } = await import('./components/states/visualizeSoil');
-  const { default: initPlantVisualizer } = await import('./components/states/visualizePlant');
-  const { default: initExtrasVisualizer } = await import('./components/states/visualizeExtras');
+  await import('./components/states/getPotDesing.js').then(({ getPotDesing }) => getPotDesing());
+  const { default: initPotVisualizer } = await import('./components/states/visualizePot.js');
+  const { default: initSoilVisualizer } = await import('./components/states/visualizeSoil.js');
+  const { default: initPlantVisualizer } = await import('./components/states/visualizePlant.js');
+  const { default: initExtrasVisualizer } = await import('./components/states/visualizeExtras.js');
 
   initPotVisualizer();
   initSoilVisualizer();

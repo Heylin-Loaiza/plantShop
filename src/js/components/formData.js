@@ -1,5 +1,5 @@
-import { typeOfPlants } from '../../utils/config';
-import ObjPlant from './plantRender';
+import { typeOfPlants } from '../../utils/config.js';
+import ObjPlant from './plantRender.js';
 
 const form = document.getElementById('form');
 

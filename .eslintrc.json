@@ -24,7 +24,10 @@
   },
   "rules": {
     "quotes": ["error", "single"],
-    "no-console": "off"
+    "no-console": "off",
+    "linebreak-style": ["error", "windows"],
+    "import/no-unresolved": 2,
+    "import/extensions": ["error", "always"]
   },
   "ignorePatterns": [
     "webpack.config.js/**",

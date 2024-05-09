@@ -1,6 +1,6 @@
-import { observerPot, observerStylePot } from './getPotDesing';
-import { observerColor } from './toggleSwitch';
-import { state } from '../../../utils/config';
+import { observerPot, observerStylePot } from './getPotDesing.js';
+import { observerColor } from './toggleSwitch.js';
+import { state } from '../../../utils/config.js';
 
 function handlePotChange(pot) {
   const potText = document.getElementById('p-pot');

@@ -1,4 +1,4 @@
-import images from './plantImg';
+import images from './plantImg.js';
 import '../../styles/style.css';
 
 function card(plant, container) {
