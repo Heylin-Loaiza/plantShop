@@ -1,5 +1,3 @@
-// import { state } from '../../utils/config';
-
 const container = document.getElementById('card__container');
 
 // function link() {
@@ -16,7 +14,7 @@ const container = document.getElementById('card__container');
 
 function renderBtn(plant) {
   const btn = document.createElement('a');
-  btn.href = '/customize-form.html';
+  btn.href = '/customizeForm.html';
   btn.textContent = 'Customize!';
   btn.classList.add('btn', 'btn--bg', 'card-btn');
   container.appendChild(btn);

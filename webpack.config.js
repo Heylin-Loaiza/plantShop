@@ -2,16 +2,20 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    home: {
+      import: './src/index.js',
+    },
+    customize: {
+      import: './src/mainCustom.js',
+    },
+  },
   output: {
-    filename: '[name].js',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
   },
   devtool: 'inline-source-map',
-  devServer: {
-    static: './dist',
-  },
   module: {
     rules: [
       {
@@ -55,8 +59,8 @@ module.exports = {
       filename: 'index.html',
     }),
     new HtmlWebpackPlugin({
-      template: './src/pages/customize-form.html',
-      filename: 'customize-form.html',
+      template: './src/pages/customizeForm.html',
+      filename: 'customizeForm.html',
     }),
     new HtmlWebpackPlugin({
       template: './src/pages/purchaseDetails.html',
