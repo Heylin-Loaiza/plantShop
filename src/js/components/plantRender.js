@@ -1,9 +1,12 @@
 /* eslint-disable no-undef */
 import Plant from '../../utils/builderPlant.js';
 import card from './card.js';
-import renderBtn from './customizeBtn.js';
+import Btn from './Btn.js';
 
 export default function ObjPlant(plantName, soil, style, extras, watering) {
+  const html = '/customizeForm.html';
+  const text = 'Customize!';
+
   const plant = new Plant(plantName)
     .setSoil(soil)
     .setPotDecoration(style)
@@ -17,5 +20,5 @@ export default function ObjPlant(plantName, soil, style, extras, watering) {
   }
 
   card(plant, 'card__container');
-  renderBtn(plant);
+  Btn(plant, html, text);
 }

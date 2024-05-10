@@ -9,6 +9,9 @@ module.exports = {
     customize: {
       import: './src/mainCustom.js',
     },
+    purchase: {
+      import: './src/purchase.js',
+    },
   },
   output: {
     filename: '[name].bundle.js',
