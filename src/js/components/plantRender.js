@@ -20,5 +20,5 @@ export default function ObjPlant(plantName, soil, style, extras, watering) {
   }
 
   card(plant, 'card__container');
-  Btn(plant, html, text);
+  Btn(plant, html, text, 'card__container');
 }

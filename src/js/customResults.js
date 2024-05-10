@@ -11,7 +11,7 @@ export default async function customResult(plant) {
 
   const html = '/purchaseDetails.html';
   const text = 'Check store availability';
-  Btn(state, html, text);
+  Btn(state, html, text, 'card__container');
 
   await import('./components/states/getPotDesing.js').then(({ getPotDesing }) => getPotDesing());
   const { default: initPotVisualizer } = await import('./components/states/visualizePot.js');

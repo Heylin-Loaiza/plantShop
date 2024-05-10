@@ -1,5 +1,5 @@
-function Btn(plant, html, text) {
-  const container = document.getElementById('card__container');
+function Btn(plant, html, text, containerName) {
+  const container = document.getElementById(containerName);
   const anchor = document.createElement('a');
 
   anchor.href = html;
