@@ -1,5 +1,6 @@
 import card from './js/components/card.js';
 import Btn from './js/components/Btn.js';
+import './styles/style.css';
 
 const html = '/customizeForm.html';
 const text = 'Back to customization';
