@@ -1,13 +1,13 @@
-@import url('./partials/form.css');
-@import url('./partials/card.css');
-@import url('./partials/btn.css');
+@import url('./modules/form.css');
+@import url('./modules/card.css');
+@import url('./modules/btn.css');
 
 * {
   font-family: 'Roboto', sans-serif;
   color: rgb(83, 83, 83);
 }
 
-main{
+main {
   display: flex;
   justify-content: center;
   gap: 200px;
