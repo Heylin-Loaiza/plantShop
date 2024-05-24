@@ -1,4 +1,8 @@
-require.context('/public/', true, /^\.\/.*\.png|\.\/.*\.PNG/);
+function importAll(r) {
+  r.keys().forEach(r);
+}
+
+importAll(require.context('/public/', true, /^\.\/.*\.png|\.\/.*\.PNG/));
 
 export default function images(plant) {
   const {
