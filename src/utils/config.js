@@ -52,7 +52,7 @@ const prices = {
     simple: 3.0,
     decorated: 4.0,
     painted: 4.0,
-    especial: 5.0,
+    especial: 5.0, // painted and decorated
   },
   ceramic: {
     simple: 5.0,
