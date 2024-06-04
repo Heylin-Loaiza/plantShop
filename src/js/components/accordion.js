@@ -1,14 +1,24 @@
 /* eslint-disable no-param-reassign */
 import pricesInfo from './priceInfo.js';
 import { info } from '../../services/api.js';
-import { accordionAlerts } from './inventoryAlerts.js';
+import { alerts, accordionAlerts } from './inventoryAlerts.js';
 
 const accordion = async (plantObj) => {
-  const infoPlant = await info(`${plantObj.name}`);
+  const { name, style, prices } = plantObj;
+  const infoPlant = await info(`${name}`);
   const { description, care } = infoPlant;
 
-  document.getElementById('container__info').insertAdjacentHTML(
+  document.getElementById('info__plant').insertAdjacentHTML(
     'afterbegin',
+    `<h1>Plant with ${style} pot and  soil</h1>
+    <p>$${prices.total}</p>
+    <p>${alerts(plantObj)}</p>
+    <button>Order now!</button>
+    `,
+  );
+
+  document.getElementById('container__info').insertAdjacentHTML(
+    'beforeend',
     `<button class="accordion">Price breakdown</button>
     <div class="panel">
       ${pricesInfo(plantObj)}
