@@ -3,15 +3,19 @@ const alerts = (obj) => {
   const { plant, soil, pot } = stock;
 
   let alertText = '';
+  let colorClass = '';
   if (plant.stock === 0 || soil.stock === 0 || pot.stock === 0) {
     alertText = 'One of the items in your order is out of stock. Please check the inventory alerts';
+    colorClass = 'red';
   } else if (plant.stock < 10 || soil.stock < 10 || pot.stock < 10) {
     alertText = 'One of the items in your order has limited stock. Order soon!';
+    colorClass = 'yellow';
   } else {
     alertText = 'In stock';
+    colorClass = 'green';
   }
 
-  return alertText;
+  return `<p class="${colorClass}">${alertText}</p>`;
 };
 
 const accordionAlerts = (obj) => {
@@ -33,19 +37,22 @@ const accordionAlerts = (obj) => {
       noStock: `${obj.color} ${obj.pot} pot is out of stock. Please select a different pot`,
       limit: `${obj.color} ${obj.pot}: Only ${pot.stock} items left in stock!`,
     },
-  }
+  };
 
+  let colorClass = '';
   Object.entries(stock).forEach(([key, value]) => {
     if (value.stock === 0) {
       product.push(messageTemplate[key].noStock);
-    } else if (pot.stock < 10) {
+      colorClass = 'red';
+    } else if (value.stock < 10) {
       product.push(messageTemplate[key].limit);
+      colorClass = 'yellow';
     } else {
       null;
     }
   });
 
-  const prodAlert = product.map((text) => `<p>${text}</p>`).join('');
+  const prodAlert = product.map((text) => `<p class="${colorClass}">${text}</p>`).join('');
   return prodAlert;
 };
 

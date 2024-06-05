@@ -11,9 +11,9 @@ const accordion = async (plantObj) => {
   document.getElementById('info__plant').insertAdjacentHTML(
     'afterbegin',
     `<h1>Plant with ${style} pot and  soil</h1>
-    <p>$${prices.total}</p>
-    <p>${alerts(plantObj)}</p>
-    <button>Order now!</button>
+    <p class="info__plant-price">$${prices.total}</p>
+    ${alerts(plantObj)}
+    <button class="btn btn--bg">Order now!</button>
     `,
   );
 
@@ -26,7 +26,7 @@ const accordion = async (plantObj) => {
 
     <button class="accordion">Inventory alerts</button>
     <div class="panel">
-      <p>${accordionAlerts(plantObj)}</p>
+      ${accordionAlerts(plantObj)}
     </div>
 
     <button class="accordion">Plant description</button>
@@ -36,10 +36,22 @@ const accordion = async (plantObj) => {
 
     <button class="accordion">Caring tips</button>
     <div class="panel">
-      <p>${care.light}</p>
-      <p>${care.water}</p>
-      <p>${care.humidity}</p>
-      <p>${care.temperature}</p>
+      <div>
+        <h2 class="iconCare">Light</h2>
+        <p>${care.light}</p>
+      </div>
+      <div>
+        <h2 class="iconCare">Water</h2>
+        <p>${care.water}</p>
+      </div>
+      <div>
+        <h2 class="iconCare">Humidity</h2>
+        <p>${care.humidity}</p>
+      </div>
+      <div>
+        <h2 class="iconCare">Temperature</h2>
+        <p>${care.temperature}</p>
+      </div>
     </div>`,
   );
 

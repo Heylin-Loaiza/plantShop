@@ -1,0 +1,36 @@
+.info__plant-price {
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.red {
+  background-color: rgb(228, 0, 0);
+  padding: 8px 10px;
+  color: #fff;
+}
+
+.yellow {
+  background-color: rgb(231, 231, 17);
+  padding: 8px 10px;
+}
+
+.green {
+  background-color: rgb(30 203 30);
+  padding: 8px 12px;
+  color: #fff;
+}
+
+.panel--flex {
+  display: flex;
+}
+
+.panel--flex :first-child{
+  width: 60%;
+}
+
+.iconCare::before {
+  width: 15px;
+  margin-right: 10px;
+  background: url('/public/light.svg') no-repeat;
+  background-size: contain;
+}

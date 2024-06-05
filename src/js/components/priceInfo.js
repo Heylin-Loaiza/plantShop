@@ -7,7 +7,7 @@ const pricesInfo = (obj) => {
   const extrasPrices = extras.map((element) => `<p>$${prices[element]}</p>`).join('');
 
   const text = `
-  <div>
+  <div class="panel--flex">
     <div>
       <p>${name}</p>
       <p>${color} ${pot}pot -${style}</p>
