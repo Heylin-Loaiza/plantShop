@@ -1,4 +1,4 @@
-/* eslint-disable no-param-reassign */
+/* eslint-disable no-return-assign */
 import pricesInfo from './priceInfo.js';
 import { info } from '../../services/api.js';
 import { alerts, accordionAlerts } from './alerts.js';
@@ -79,7 +79,7 @@ const accordion = async (plantObj) => {
   if (stock.plant.stock === 0 || stock.soil.stock === 0 || stock.pot.stock === 0) {
     acc.forEach((panel, index) => (index !== 1 ? panel.style.display = 'none' : 'block'));
 
-    const inventoryAlertsPanel = document.querySelectorAll('.panel')[1]; // Assuming the second panel is "Inventory alerts"
+    const inventoryAlertsPanel = document.querySelectorAll('.panel')[1];
     inventoryAlertsPanel.style.display = 'block';
   }
 };

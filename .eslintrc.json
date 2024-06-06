@@ -27,7 +27,8 @@
     "no-console": "off",
     "linebreak-style": ["error", "windows"],
     "import/no-unresolved": 2,
-    "import/extensions": ["error", "always"]
+    "import/extensions": ["error", "always"],
+    "no-param-reassign": ["error", { "props": false }]
   },
   "ignorePatterns": [
     "webpack.config.js/**",

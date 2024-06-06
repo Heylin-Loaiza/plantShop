@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 const alerts = (obj) => {
   const { stock } = obj;
   const { plant, soil, pot } = stock;
