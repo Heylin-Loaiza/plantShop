@@ -50,6 +50,7 @@
   background-color: rgb(30 203 30);
   padding: 8px 12px;
   color: #fff;
+  display: table;
 }
 
 .panel--flex {
