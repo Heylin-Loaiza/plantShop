@@ -13,6 +13,13 @@
   color: white;
 }
 
+.btn-grey {
+  background-color: grey;
+  color: #fff;
+  border-color: grey;
+  cursor: default;
+}
+
 .anchor {
   margin-top: 20px;
   text-decoration: none;

@@ -4,9 +4,14 @@ const alerts = (obj) => {
 
   let alertText = '';
   let colorClass = '';
+  let btnState = '';
+  let btnColor = 'btn--bg';
+
   if (plant.stock === 0 || soil.stock === 0 || pot.stock === 0) {
     alertText = 'One of the items in your order is out of stock. Please check the inventory alerts';
     colorClass = 'red';
+    btnState = 'disabled';
+    btnColor = 'btn-grey';
   } else if (plant.stock < 10 || soil.stock < 10 || pot.stock < 10) {
     alertText = 'One of the items in your order has limited stock. Order soon!';
     colorClass = 'yellow';
@@ -15,7 +20,8 @@ const alerts = (obj) => {
     colorClass = 'green';
   }
 
-  return `<p class="${colorClass}">${alertText}</p>`;
+  return `<p class="${colorClass}">${alertText}</p>
+  <button class="btn ${btnColor}" ${btnState}>Order now!</button>`;
 };
 
 const accordionAlerts = (obj) => {
