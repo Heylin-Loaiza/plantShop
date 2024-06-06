@@ -1,9 +1,13 @@
+#container__info {
+  margin-top: 20px;
+}
+
 .accordion {
   width: 500px;
 }
 
 .accordion p {
-  width: 90% !important;
+  width: 90%;
 }
 
 .accordion-control {

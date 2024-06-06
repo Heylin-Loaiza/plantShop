@@ -37,7 +37,7 @@ const getTotal = (plantObj, next) => {
 
   const values = Object.values(plantObj.prices);
   const total = values.reduce((acc, currentValue) => acc + currentValue, 0).toFixed(2);
-  
+
   plantObj.prices.total = total;
 
   next();
