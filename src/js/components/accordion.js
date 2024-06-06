@@ -3,6 +3,8 @@ import pricesInfo from './priceInfo.js';
 import { info } from '../../services/api.js';
 import { alerts, accordionAlerts } from './alerts.js';
 
+require.context('/public/', true, /\.svg$/);
+
 const accordion = async (plantObj) => {
   const {
     name, style, prices, stock,
@@ -39,19 +41,23 @@ const accordion = async (plantObj) => {
       <button class="accordion-control">Caring tips</button>
       <div class="panel">
         <div>
-          <h2 class="iconCare">Light</h2>
+          <img class="caring-icons" src="/public/icons/light.svg"/>
+          <h2 class="caring--titles">Light</h2>
           <p>${care.light}</p>
         </div>
         <div>
-          <h2 class="iconCare">Water</h2>
+          <img class="caring-icons" src="/public/icons/water.svg"/>
+          <h2 class="caring--titles">Water</h2>
           <p>${care.water}</p>
         </div>
         <div>
-          <h2 class="iconCare">Humidity</h2>
+          <img class="caring-icons" src="/public/icons/humidity.svg"/>
+          <h2 class="caring--titles">Humidity</h2>
           <p>${care.humidity}</p>
         </div>
         <div>
-          <h2 class="iconCare">Temperature</h2>
+          <img class="caring-icons" src="/public/icons/temperature.svg"/>
+          <h2 class="caring--titles">Temperature</h2>
           <p>${care.temperature}</p>
         </div>
       </div>

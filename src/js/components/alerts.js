@@ -46,20 +46,16 @@ const accordionAlerts = (obj) => {
     },
   };
 
-  let colorClass = '';
   Object.entries(stock).forEach(([key, value]) => {
     if (value.stock === 0) {
-      product.push(messageTemplate[key].noStock);
-      colorClass = 'red';
+      product.push({ text: messageTemplate[key].noStock, colorClass: 'red' });
     } else if (value.stock < 10) {
-      product.push(messageTemplate[key].limit);
-      colorClass = 'yellow';
-    } else {
-      null;
+      product.push({ text: messageTemplate[key].limit, colorClass: 'yellow' });
     }
   });
 
-  const prodAlert = product.map((text) => `<p class="${colorClass}">${text}</p>`).join('');
+  const prodAlert = product.map(({ text, colorClass }) => `<p class="${colorClass}">${text}</p>`).join('');
+
   return prodAlert;
 };
 

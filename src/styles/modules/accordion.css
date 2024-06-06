@@ -60,10 +60,14 @@
   width: 60%;
 }
 
+.caring--titles {
+  font-size: 20px;
+  margin: 8px 0 5px;
+  margin-left: 25px;
+}
 
-/* .iconCare::before {
-  width: 15px;
-  margin-right: 10px;
-  background: url('/public/icons/light.svg') no-repeat;
-  background-size: contain;
-} */
+.caring-icons {
+  position: relative;
+  right: 5px;
+  top: 35px;
+}
